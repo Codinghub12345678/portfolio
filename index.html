@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-[#0a0a23] text-white font-sans overflow-x-hidden">
+
+  <!-- Navbar -->
+  <nav class="fixed w-full z-50 bg-transparent transition duration-300 ease-in-out" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-teal-400">MyPortfolio</h1>
+      <ul class="flex space-x-6 text-white">
+        <li><a href="#about" class="hover:text-teal-400">About</a></li>
+        <li><a href="#projects" class="hover:text-teal-400">Projects</a></li>
+        <li><a href="#skills" class="hover:text-teal-400">Skills</a></li>
+        <li><a href="#experience" class="hover:text-teal-400">Experience</a></li>
+        <li><a href="#contact" class="hover:text-teal-400">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="h-screen flex items-center justify-center relative bg-gradient-to-br from-[#0a0a23] to-[#1a1a40]">
+    <div class="absolute inset-0 z-0" id="particles-js"></div>
+    <div class="z-10 text-center animate__animated animate__fadeIn">
+      <img src="https://via.placeholder.com/150" alt="Profile" class="mx-auto rounded-full border-4 border-teal-400 shadow-lg mb-6" />
+      <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 glow">Hi, I'm <span class="text-teal-400">John Doe</span></h1>
+      <span id="typed" class="text-xl md:text-2xl text-violet-400 font-semibold"></span>
+      <br />
+      <a href="#contact" class="mt-6 inline-block px-6 py-3 bg-teal-400 text-black font-bold rounded-full hover:glow transition">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- About Me -->
+  <section id="about" class="py-20 px-6 md:px-20 bg-[#0f0f2f]">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <img src="https://via.placeholder.com/300x300" alt="About" class="rounded-xl shadow-lg polygon" />
+      <div class="bg-[#1a1a40] p-6 rounded-lg shadow-lg animate__animated animate__fadeInRight">
+        <h2 class="text-3xl font-bold text-teal-400 mb-4">About Me</h2>
+        <p class="text-gray-300 mb-4">I'm a passionate Computer Science student with a love for technology, innovation, and building impactful solutions.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="badge">Python</span>
+          <span class="badge">FastAPI</span>
+          <span class="badge">Docker</span>
+          <span class="badge">MySQL</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-20 px-6 md:px-20 bg-[#0a0a23]">
+    <h2 class="text-3xl font-bold text-center text-teal-400 mb-10">Projects</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="project-card">
+        <img src="https://via.placeholder.com/400x250" alt="Project" />
+        <div class="overlay">
+          <h3 class="text-xl font-bold">Asset Manager</h3>
+          <p>FastAPI + MySQL + Docker</p>
+          <a href="#" class="text-teal-400 underline">GitHub</a>
+        </div>
+      </div>
+      <!-- Repeat for more projects -->
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-20 px-6 md:px-20 bg-[#0f0f2f]">
+    <h2 class="text-3xl font-bold text-center text-teal-400 mb-10">Skills</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div class="skill">
+        <i class="fab fa-python text-4xl text-teal-400 mb-2"></i>
+        <p>Python</p>
+        <div class="progress" data-percent="90"></div>
+      </div>
+      <!-- Repeat for more skills -->
+    </div>
+  </section>
+
+  <!-- Experience & Education -->
+  <section id="experience" class="py-20 px-6 md:px-20 bg-[#0a0a23]">
+    <h2 class="text-3xl font-bold text-center text-teal-400 mb-10">Experience & Education</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
+        <div class="timeline-content">
+          <h3>Intern @ TechCorp</h3>
+          <p>Worked on backend APIs using FastAPI and Docker.</p>
+        </div>
+      </div>
+      <!-- Repeat for more items -->
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 px-6 md:px-20 bg-[#0f0f2f] relative">
+    <div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('https://via.placeholder.com/1200x600');"></div>
+    <div class="relative z-10 text-center">
+      <h2 class="text-3xl font-bold text-teal-400 mb-6">Contact Me</h2>
+      <form class="max-w-xl mx-auto bg-[#1a1a40] p-6 rounded-lg shadow-lg">
+        <input type="text" placeholder="Name" class="form-input" />
+        <input type="email" placeholder="Email" class="form-input" />
+        <textarea placeholder="Message" class="form-input h-32"></textarea>
+        <button class="mt-4 px-6 py-3 bg-teal-400 text-black font-bold rounded-full hover:glow transition">Send</button>
+      </form>
+      <div class="mt-6 flex justify-center space-x-6 text-2xl">
+        <a href="#" class="text-teal-400 hover:text-white"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="text-teal-400 hover:text-white"><i class="fab fa-github"></i></a>
+        <a href="#" class="text-teal-400 hover:text-white"><i class="fab fa-kaggle"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
